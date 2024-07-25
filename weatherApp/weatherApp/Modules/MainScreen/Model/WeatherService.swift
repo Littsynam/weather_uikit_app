@@ -7,10 +7,6 @@
 
 import Foundation
 
-
-
-
-
 class WeatherService {
     private let apiKey = "cb8e7167d87249eb9f0163618240304"
     private let baseUrl = "https://api.weatherapi.com/v1"
@@ -69,4 +65,3 @@ class WeatherService {
         task.resume()
     }
 }
-
