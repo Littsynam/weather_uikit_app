@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainScreenViewController: UIViewController {
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageViewCondition: UIImageView!
     @IBOutlet weak var tmperatureLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var textConditionLabel: UILabel!
@@ -57,8 +59,22 @@ extension MainScreenViewController: MainScreenPresenterOutput {
         let temp = temperature.current.temperatureInCelsius
         tmperatureLabel.text = "Temperature: \n \(temp) C"
         setTemperatyreIcon(by: temp)
-        
         textConditionLabel.text = temperature.current.condition.text
+        
+        
+//        let iconStringUrl = "https://" + temperature.current.condition.icon.dropFirst(2)
+//      
+//        guard let apiURL = URL(string: String(iconStringUrl)) else { return  }
+//
+//           URLSession.shared.dataTask(with: apiURL) { data, _, _ in
+//               guard let data = data else { return }
+//               
+//               DispatchQueue.main.async {
+//                   self.imageViewCondition.image = UIImage(data: data)
+//               }
+//           } .resume()
+        let iconStringUrl = URL(string: "https:" + temperature.current.condition.icon)
+        imageViewCondition.kf.setImage(with: iconStringUrl)
     }
     
     func onLoadForecast(forecast: Forecast) {

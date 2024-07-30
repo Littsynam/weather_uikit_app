@@ -10,6 +10,7 @@
 		A92892F32C469C4400F99230 /* Responce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92892F22C469C4400F99230 /* Responce.swift */; };
 		A946D3622C50DB7500DF4488 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946D3612C50DB7500DF4488 /* MainScreenPresenter.swift */; };
 		A946D3642C50DD2700DF4488 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A946D3632C50DD2700DF4488 /* Settings.swift */; };
+		A95E5AAE2C590717001B6021 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A95E5AAD2C590717001B6021 /* Kingfisher */; };
 		A9607B742C3BD88300180420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9607B732C3BD88300180420 /* AppDelegate.swift */; };
 		A9607B762C3BD88300180420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9607B752C3BD88300180420 /* SceneDelegate.swift */; };
 		A9607B782C3BD88300180420 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9607B772C3BD88300180420 /* MainScreenViewController.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95E5AAE2C590717001B6021 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,9 @@
 			dependencies = (
 			);
 			name = weatherApp;
+			packageProductDependencies = (
+				A95E5AAD2C590717001B6021 /* Kingfisher */,
+			);
 			productName = weatherApp;
 			productReference = A9607B702C3BD88300180420 /* weatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +195,9 @@
 				Base,
 			);
 			mainGroup = A9607B672C3BD88300180420;
+			packageReferences = (
+				A95E5AAC2C590717001B6021 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A9607B712C3BD88300180420 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,6 +455,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A95E5AAC2C590717001B6021 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A95E5AAD2C590717001B6021 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A95E5AAC2C590717001B6021 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9607B682C3BD88300180420 /* Project object */;
 }
