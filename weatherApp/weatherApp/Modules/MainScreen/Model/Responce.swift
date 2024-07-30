@@ -11,7 +11,6 @@ import UIKit
 struct Response: Codable {
     var location: Location
     var current: Current
-    var forecast: Forecast?
 }
 
 struct Response2: Codable {
@@ -24,11 +23,19 @@ struct Location: Codable {
 
 struct Current: Codable {
     var temperatureInCelsius: Double
+    var condition: Condition
     
     enum CodingKeys: String, CodingKey {
         case temperatureInCelsius = "temp_c"
+        case condition
+    }
+
+    struct Condition: Codable {
+        var text: String
+        var icon: String
     }
 }
+
 
 struct Forecast: Codable {
     var forecastday:[ForecastDay]

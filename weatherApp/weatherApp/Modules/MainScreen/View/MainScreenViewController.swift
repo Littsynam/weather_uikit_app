@@ -13,7 +13,7 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tmperatureLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var textConditionLabel: UILabel!
     // 1 - надо реализовать переменную
     var city = ""
     
@@ -54,9 +54,11 @@ extension MainScreenViewController: MainScreenPresenterOutput {
     
     func onLoadTemperature(temperature: Response) {
         
-        let temperature = temperature.current.temperatureInCelsius
-        tmperatureLabel.text = "Temperature: \n \(temperature) C"
-        setTemperatyreIcon(by: temperature)
+        let temp = temperature.current.temperatureInCelsius
+        tmperatureLabel.text = "Temperature: \n \(temp) C"
+        setTemperatyreIcon(by: temp)
+        
+        textConditionLabel.text = temperature.current.condition.text
     }
     
     func onLoadForecast(forecast: Forecast) {

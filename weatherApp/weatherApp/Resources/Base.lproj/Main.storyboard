@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-FO-Gie">
-                                <rect key="frame" x="16" y="119" width="361" height="107"/>
+                                <rect key="frame" x="16" y="119" width="361" height="173"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL0-sl-S1I">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
@@ -56,17 +56,23 @@
                                             <action selector="getTemperatureButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyP-r9-h70"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-dw-xVA">
+                                        <rect key="frame" x="0.0" y="123" width="361" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="18A-8m-uS5">
-                                <rect key="frame" x="146.66666666666666" y="242" width="100" height="100"/>
+                                <rect key="frame" x="146.66666666666666" y="308" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="T8P-dJ-au3"/>
                                     <constraint firstAttribute="height" constant="100" id="xo0-ku-kDK"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tR7-RS-jUz">
-                                <rect key="frame" x="0.0" y="358" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="424" width="393" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9fq-un-7Tr"/>
@@ -147,6 +153,7 @@
                         <outlet property="cityLabel" destination="JL0-sl-S1I" id="nug-jb-twa"/>
                         <outlet property="collectionView" destination="tR7-RS-jUz" id="riZ-nc-60r"/>
                         <outlet property="imageView" destination="18A-8m-uS5" id="N9O-ZJ-ow7"/>
+                        <outlet property="textConditionLabel" destination="Xca-dw-xVA" id="BT8-4Q-aYf"/>
                         <outlet property="tmperatureLabel" destination="r6g-19-OXt" id="E9g-fp-Dpa"/>
                     </connections>
                 </viewController>

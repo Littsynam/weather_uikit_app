@@ -14,4 +14,9 @@ class SettingsViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         userDefaults.set(city, forKey: "city")
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var savedCity = UserDefaults.standard.string(forKey: "city")
+        settingTxtField.text = savedCity
+    }
 }
